@@ -2,8 +2,9 @@ package dev.cleantho.bootcamp.models;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.time.LocalDate;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,7 +25,8 @@ public class Reserve implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
-	private LocalDate date;
+	@JsonIgnore
+	private String date;
 	private Instant startTime;
 	private Instant endTime;
 	private String description;
@@ -57,11 +59,11 @@ public class Reserve implements Serializable {
 		this.user = user;
 	}
 
-	public LocalDate getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDate date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 

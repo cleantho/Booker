@@ -21,7 +21,7 @@ classDiagram
      
     class Reserve {
         - Integer id
-        - LocalDate date
+        - String date
         - Instant startTime
         - Instant endTime
         - String description        
