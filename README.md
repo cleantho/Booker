@@ -37,3 +37,5 @@ classDiagram
     Room "1" -- "0..*" Reserve
     Reserve "0..*" -- "1" User : request
 ```
+---
+Devido incompatibilidade de versão do **Java 23** no Railway, a versão no modo produção foi ajustada para **Java 17**. Outra mudança no **Railway** foi a exclusão do projeto energetic-insight - web para criação de um novo projeto spirited-reprieve - Booker.
